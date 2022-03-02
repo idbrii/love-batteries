@@ -4,7 +4,6 @@
 
 local path = (...):gsub("stringx", "")
 local assert = require(path .. "assert")
-local pretty = require(path .. "pretty")
 
 local stringx = setmetatable({}, {
 	__index = string
@@ -78,8 +77,6 @@ function stringx.split(self, delim, limit)
 	--return the collection
 	return res
 end
-
-stringx.pretty = pretty.string
 
 --(generate a map of whitespace byte values)
 local _whitespace_bytes = {}

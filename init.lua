@@ -4,6 +4,8 @@
 	a collection of helpful code to get your project off the ground faster
 ]]
 
+error("Can I avoid using this top-level file?")
+
 local path = ...
 local function require_relative(p)
 	return require(table.concat({path, p}, "."))
@@ -26,19 +28,12 @@ local _batteries = {
 	--collections
 	sequence = require_relative("sequence"),
 	set = require_relative("set"),
-	--geom
-	vec2 = require_relative("vec2"),
-	vec3 = require_relative("vec3"),
-	intersect = require_relative("intersect"),
 	--
-	timer = require_relative("timer"),
 	pubsub = require_relative("pubsub"),
 	unique_mapping = require_relative("unique_mapping"),
 	state_machine = require_relative("state_machine"),
 	async = require_relative("async"),
 	manual_gc = require_relative("manual_gc"),
-	colour = require_relative("colour"),
-	pretty = require_relative("pretty"),
 	measure = require_relative("measure"),
 	make_pooled = require_relative("make_pooled"),
 }
