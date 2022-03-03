@@ -1,10 +1,10 @@
 return {
     std = "lua51+love",
     ignore = {
-        "211", -- Unused local variable.
+        --~ "211", -- Unused local variable.
         "212/self", -- Unused argument self.
-        "213", -- Unused loop variable.
-        "631", -- Line is too long.
+        --~ "213", -- Unused loop variable.
+        --~ "631", -- Line is too long.
     },
     files = {
         ["tests.lua"] = {
