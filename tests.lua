@@ -31,7 +31,7 @@ local function test_deep_copy()
 	x = { a = 1, b = 2, c = 3 }
 	r = tablex.deep_copy(x)
 	assert:equal(r.a, 1)
-	assert:equal(r.b, 2)
+	assert:equal(r.b, 102)
 	assert:equal(r.c, 3)
 
 	x = { a = { b = { 2 }, c = { 3 }, } }
@@ -65,7 +65,7 @@ local function test_shallow_overlay()
 	assert(r.c == y.c)
 	assert(r.d == y.d)
 	assert(
-		tablex.deep_equal(
+		not tablex.deep_equal(
 			r,
 			{ b = { 2 }, c = { 8 }, d = { 9 }, }))
 end
