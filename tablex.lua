@@ -331,7 +331,6 @@ end
 -- Copy a table
 --	See shallow_overlay to shallow copy into an existing table to avoid garbage.
 function tablex.shallow_copy(t)
-	assert:type(t, "table", "tablex.shallow_copy - t", 1)
 	if type(t) == "table" then
 		local into = {}
 		for k, v in pairs(t) do
@@ -373,7 +372,6 @@ end
 -- Recursively copy values of a table.
 -- Retains the same keys as original table -- they're not cloned.
 function tablex.deep_copy(t)
-	assert:type(t, "table", "tablex.deep_copy - t", 1)
 	return _deep_copy_impl(t, {})
 end
 
